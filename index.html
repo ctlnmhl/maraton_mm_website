@@ -37,9 +37,9 @@
 								<li><a href="#program">Program</a></li>
 								<li><a href="#register">Înscriere</a></li>
 								<li><a href="#regulament">Regulament</a></li>
-								<li><a href="#about">Rezultate</a></li>
-								<li><a href="#news">Știri</a></li>
-								<li><a href="#contact">Parteneri</a></li>
+								<li><a href="#rezultate">Rezultate</a></li>
+								<li><a href="#stiri">Știri</a></li>
+								<li><a href="#parteneri">Parteneri</a></li>
 								<!-- <li><a href="#contact">Sponsori</a></li> -->
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
@@ -211,21 +211,54 @@
 							</article>
 
 						<!-- About -->
-							<article id="about">
+							<article id="rezultate">
 								<h2 class="major">Rezultate</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<!-- <span class="image main"><img src="images/pic03.jpg" alt="" /></span> -->
+								<p>
+									<b>Rezultate 2022</b>
+								</p>
+								<button class="button small" id="b1", onclick="results('gender-results-2022')">Gender Results</button>
+								<div id="gender-results-2022" style="display:none">
+									<iframe src="https://docs.google.com/gview?url=https://my4.raceresult.com/221435/RRPublish/data/pdf?name=Result%20Lists%7CGender%20Results&contest=0&lang=en&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe>
+								</div>
+								<button class="button small" id="b1", onclick="results('age-group-results-2022')">Age Group Results</button>
+								<br><div id="age-group-results-2022" style="display:none">
+									<iframe src="https://docs.google.com/gview?url=https://my4.raceresult.com/221435/RRPublish/data/pdf?name=Result%20Lists%7CAge%20Group%20Results&contest=0&lang=en&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe>
+								</div>
+								<br>
+								<p>
+									<b>Rezultate 2021</b>
+								</p>
+								<button class="button small" id="b1", onclick="results('gender-results-2021')">Gender Results</button>
+								<div id="gender-results-2021" style="display:none">
+									<iframe src="https://docs.google.com/gview?url=https://my3.raceresult.com/182838/RRPublish/data/pdf?name=Result%20Lists%7CGender%20Results&contest=0&lang=en&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe>
+								</div>
+								<button class="button small" id="b1", onclick="results('age-group-results-2021')">Age Group Results</button>
+								<br><div id="age-group-results-2021" style="display:none">
+									<iframe src="https://docs.google.com/gview?url=https://my3.raceresult.com/182838/RRPublish/data/pdf?name=Result%20Lists%7CAge%20Group%20Results&contest=0&lang=en&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe>
+								</div>
+								<br>
+								<script>
+									function results(element_id) {
+									  var x = document.getElementById(element_id), displayValue = "";
+									  if (x.style.display === ""){
+										x.style.display = "none";
+									  } else {
+										x.style.display = displayValue;
+									  }
+									}
+								</script>
 							</article>
 
 						<!-- Stiri -->
-							<article id="news">
+							<article id="stiri">
 								<h2 class="major">Știri</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
 							</article>
 
 						<!-- Contact -->
-							<article id="contact">
+							<article id="parteneri">
 								<h2 class="major">Parteneri</h2>
 								<!-- <form method="post" action="#">
 									<div class="fields">
