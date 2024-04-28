@@ -358,23 +358,35 @@
 							<article id="stiri">
 								<h2 class="major">Știri</h2>
 								<span class="image main"><img src="images/news01.jpeg" alt="" /></span>
+								<h3>Deschidere înscrieri Maraton Maramureș</h3>
+								<h4><i>Data publicării: 28 Aprilie 2024</i></h4>
 								<p>Dragi alergători și iubitori ai naturii!</p>
-									<p>Vă invităm să vă alăturați aventurii montane a anului în inima Maramureșului! Înscrierile pentru Maratonul Maramureș sunt acum deschise! 
-								</p>
-								<p>🌲 <b>Drumul Maramureșului 15K:</b> Traseul nostru de alergare și drumeție este deschis tuturor! Pornind din parcul Regina Maria Baia Mare, veți urma traseul pitoresc marcat cu semnul distinctiv până la barajul Firiza. Vă veți bucura de o urcare provocatoare și o coborâre revigorantă, cu o panoramă de neuitat către barajul Firiza și Vârful Igniș.</p>
-								<p>🏔️ <b>Semimaraton Simared 21K:</b> Acest traseu este dedicat celor care caută o provocare de alergare montană. După aceeași urcare inițială ca și Drumul Maramureșului 15K, veți continua cu o urcare spre Piatra Șoimului și o coborâre spre Lacul Bodi Ferneziu, finalizând cu o potecă frumoasă și alergabilă până la finish.</p>
-								<p>🥇 <b>Maratonul Maramureș 42K:</b> Pentru cei care doresc să-și testeze limitele, maratonul nostru oferă o experiență unică. După traseul comun cu semimaratonul, veți explora o buclă de 21 km prin peisaje de basm, o urcare pe Vârful Igniș și o coborâre spectaculoasă, încheind cu o panoramă liniștitoare la finish.</p>
-								<p>Înscrieți-vă acum și pregătiți-vă să descoperiți frumusețea Maramureșului în pas de alergare!</p>
-								<p>Evenimentul va avea loc pe data de 15 iunie 2024 iar concurenții care se înscriu din timp beneficiază de o contribuție de participare redusă. Găsești mai multe detalii la secțiunea Înscrieri</p>
+								<p id="textArea">Vă invităm să vă alăturați aventurii montane a anului în inima Maramureșului! Înscrierile pentru Maratonul Maramureș sunt acum... <a id="toggleButton" onclick="toggleText()" href="javascript:void(0);">&nbsp&nbsp&nbspVezi mai mult...</a></p>
+								<script>
+									var status = "less";
+									function toggleText() {
+										var content="<p>Vă invităm să vă alăturați aventurii montane a anului în inima Maramureșului! Înscrierile pentru Maratonul Maramureș sunt acum deschise!</p><p>🌲 <b>Drumul Maramureșului 15K:</b> Traseul nostru de alergare și drumeție este deschis tuturor! Pornind din parcul Regina Maria Baia Mare, veți urma traseul pitoresc marcat cu semnul distinctiv până la barajul Firiza. Vă veți bucura de o urcare provocatoare și o coborâre revigorantă, cu o panoramă de neuitat către barajul Firiza și Vârful Igniș.</p><p>🏔️ <b>Semimaraton Simared 21K:</b> Acest traseu este dedicat celor care caută o provocare de alergare montană. După aceeași urcare inițială ca și Drumul Maramureșului 15K, veți continua cu o urcare spre Piatra Șoimului și o coborâre spre Lacul Bodi Ferneziu, finalizând cu o potecă frumoasă și alergabilă până la finish.</p><p>🥇 <b>Maratonul Maramureș 42K:</b> Pentru cei care doresc să-și testeze limitele, maratonul nostru oferă o experiență unică. După traseul comun cu semimaratonul, veți explora o buclă de 21 km prin peisaje de basm, o urcare pe Vârful Igniș și o coborâre spectaculoasă, încheind cu o panoramă liniștitoare la finish.</p><p>Înscrieți-vă acum și pregătiți-vă să descoperiți frumusețea Maramureșului în pas de alergare!</p><p>Evenimentul va avea loc pe data de 15 iunie 2024 iar concurenții care se înscriu din timp beneficiază de o contribuție de participare redusă. Găsești mai multe detalii la secțiunea Înscrieri</p><a href='#register' class='button small'>Înscrie-te acum!</a><p><p><i>Autor: Echipa Maraton Maramureș</i></p><a id='toggleButton' onclick='toggleText()' href='javascript:void(0);'>&nbsp&nbsp&nbspVezi mai puțin...</a></p>";
+
+										if (status == "less") {
+											document.getElementById("textArea").innerHTML=content;
+											document.getElementById("toggleButton").innerText = "   Vezi mai putin...";
+											status = "more";
+										} else if (status == "more") {
+											document.getElementById("textArea").innerHTML = "Vă invităm să vă alăturați aventurii montane a anului în inima Maramureșului! Înscrierile pentru Maratonul Maramureș sunt acum... <a id='toggleButton' onclick='toggleText()' href='javascript:void(0);'>&nbsp&nbsp&nbspVezi mai mult...</a>";
+											document.getElementById("toggleButton").innerText = "   Vezi mai mult...";
+											status = "less"
+										}
+									}
+								</script>
 							</article>
 
 						<!-- Contact -->
 							<article id="parteneri">
 								<h2 class="major">Parteneri</h2>
-								<a class="image main" href="https://simared.ro/" target="_blank" rel="noopener noreferrer"><img src="images/simared_logo01.png" alt=""></a>
+								<!-- <a class="image main" href="https://simared.ro/" target="_blank" rel="noopener noreferrer"><img src="images/simared_logo01.png" alt=""></a>
 								<a class="image main" href="https://www.rapido.ro/" target="_blank" rel="noopener noreferrer"><img src="images/rapido_logo.png" alt=""></a>
 								<a class="image main" href="https://www.sole.ro/" target="_blank" rel="noopener noreferrer"><img src="images/sole_logo.jpeg" alt=""></a>
-								<a class="image main" href="https://www.ambulantamaramures.ro/" target="_blank" rel="noopener noreferrer"><img src="images/ambulanta_logo.jpeg" alt=""></a>
+								<a class="image main" href="https://www.ambulantamaramures.ro/" target="_blank" rel="noopener noreferrer"><img src="images/ambulanta_logo.jpeg" alt=""></a> -->
 								<!-- <ul class="icons">
 									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -384,7 +396,7 @@
 							</article>
 
 						<!-- Elements -->
-							<article id="elements">
+							<article id="elements1012">
 								<h2 class="major">Elements</h2>
 
 								<section>
