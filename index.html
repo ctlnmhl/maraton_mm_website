@@ -4,6 +4,8 @@
 		<title>Maraton Maramureș</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta property="og:image:secure" content="https://maratonmaramures.ro/images/tricou.jpeg">
+		<meta property="og:image" content="https://maratonmaramures.ro/images/tricou.jpeg">
 		<link rel="icon" href="favicon.ico" type="image/x-icon"> 
 		 <!-- Favicon - Android -->
 		 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -11,6 +13,39 @@
 		 <link rel="apple-touch-icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+
+			window.fbAsyncInit = function() {
+			  FB.init({
+				appId            : '413260738206212',
+				autoLogAppEvents : true,
+				xfbml            : true,
+				version          : 'v2.10'
+			  });
+			  FB.AppEvents.logPageView();
+			};
+		   
+			(function(d, s, id){
+			   var js, fjs = d.getElementsByTagName(s)[0];
+			   if (d.getElementById(id)) {return;}
+			   js = d.createElement(s); js.id = id;
+			   js.src = "//connect.facebook.net/en_US/sdk.js";
+			   fjs.parentNode.insertBefore(js, fjs);
+			 }(document, 'script', 'facebook-jssdk'));
+		  </script>
+		  
+		
+		<script defer>
+			// Set the --vh custom property to the height of the viewport
+			let vh = window.innerHeight * 0.01;
+        	document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+			// Recalculate vh when the window is resized
+			window.addEventListener('resize', () => {
+				let vh = window.innerHeight * 0.01;
+				document.documentElement.style.setProperty('--vh', `${vh}px`);
+			});
+		</script>
 	</head>
 	<body>
 		<!-- <div id="utmb">
@@ -19,10 +54,21 @@
 		
 	
 		<!-- Wrapper -->
-			<div id="wrapper">
+			<div id="wrapper" >
 				<!-- Header -->
 				
 					<header id="header">
+						<nav id="nav">
+							<ul>
+								<li><a href="#curse">Curse</a></li>
+								<li><a href="#program">Program</a></li>
+								<li><a href="#register">Înscriere</a></li>
+								<li><a href="#regulament">Regulament</a></li>
+								<li><a href="#rezultate">Rezultate</a></li>
+								<li><a href="#stiri">Știri</a></li>
+								<li><a href="#parteneri">Parteneri</a></li>
+							</ul>
+						</nav>
 						<div class="logo">
 							<span class="icon"> </span>
 						</div>
@@ -34,7 +80,7 @@
 									<span style="color: #f4aa00">Trail Run</span>
 								</h3>
 								<h2>
-									<span>15 iunie 2024</span>
+									<span>14 iunie 2025</span>
 								</h2>
 								<h3>
 									<b style="color: #f4aa00"><a href="#register">Înscrie-te acum!</a></b>
@@ -42,7 +88,7 @@
 								<!-- <p>Explorează farmecul autentic al Maramureșului în Maratonul Maramureș, pornind din Baia Mare și trecând prin peisaje spectaculoase și sate pitorești, pentru o experiență memorabilă</p> -->
 							</div>
 						</div>
-						<nav>
+						<!-- <nav>
 							<ul>
 								<li><a href="#curse">Curse</a></li>
 								<li><a href="#program">Program</a></li>
@@ -52,7 +98,7 @@
 								<li><a href="#stiri">Știri</a></li>
 								<li><a href="#parteneri">Parteneri</a></li>
 							</ul>
-						</nav>
+						</nav> -->
 					</header>
 
 				<!-- Main -->
@@ -222,7 +268,8 @@
 								<p>
 									<b>FORMULAR DE ÎNSCRIERE</b>
 								</p>
-								<script type="text/javascript" src="https://register.42km.ro/embed/embed.js"></script><iframe id="sportic-race-form" class="sportic-widget" src="https://register.42km.ro/widgets/race-entries/select_race?event=b5f92f68bcb171bf825588dd31e308a5455e49b1" onload="(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+'px';}(this));" sandbox="allow-top-navigation allow-scripts allow-popups allow-forms allow-same-origin allow-modals" style="width: 100%;overflow-x:hidden;border:0;height: 1500px"></iframe>
+								<h3>Înscrierile la Maraton Maramureș ediția 2024 sunt închise!</h3>
+								<!-- <script type="text/javascript" src="https://register.42km.ro/embed/embed.js"></script><iframe id="sportic-race-form" class="sportic-widget" src="https://register.42km.ro/widgets/race-entries/select_race?event=b5f92f68bcb171bf825588dd31e308a5455e49b1" onload="(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+'px';}(this));" sandbox="allow-top-navigation allow-scripts allow-popups allow-forms allow-same-origin allow-modals" style="width: 100%;overflow-x:hidden;border:0;height: 1500px"></iframe> -->
 								<p>
 									<p>
 										<b>LISTĂ PARTICIPANȚI</b>
@@ -335,15 +382,20 @@
 								<h2 class="major">Rezultate</h2>
 								<!-- <span class="image main"><img src="images/pic03.jpg" alt="" /></span> -->
 								<p>
+									<b>Rezultate 2024</b>
+								</p>
+								<a class="no-border" href="https://maratonmaramures.livetrail.net/classement.php" target="_blank"><button class="button small">Clasament LiveTrail</button></a>
+								<br><br>
+								<p>
 									<b>Rezultate 2022</b>
 								</p>
 								<button class="button small" id="b1", onclick="results('gender-results-2022')">Gender Results</button>
 								<div id="gender-results-2022" style="display:none">
-									<iframe src="https://docs.google.com/viewer?url=https://my4.raceresult.com/221435/RRPublish/data/pdf?name=Result%20Lists%7CGender%20Results&contest=0&lang=en&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe>
+									<iframe src="https://drive.google.com/file/d/1GF6rNp9WLVw1uqmz0O3GNh9-Yr00vQjL/preview?contest=0&lang=en&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe>
 								</div>
-								<button class="button small" id="b1", onclick="results('age-group-results-2022')">Age Group Results</button>
+								<button class="button small" id="b1", onclick="results('age-group-results-2022'); reload('age-group-results-2022')">Age Group Results</button>
 								<br><div id="age-group-results-2022" style="display:none">
-									<iframe src="https://docs.google.com/viewer?url=https://my4.raceresult.com/221435/RRPublish/data/pdf?name=Result%20Lists%7CAge%20Group%20Results&contest=0&lang=en&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe>
+									<iframe src="https://drive.google.com/file/d/1_ZepUDI5C6wKt5jeLSHXseKa9u_3UAAp/preview?contest=0&lang=en&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe>
 								</div>
 								<br>
 								<p>
@@ -351,11 +403,11 @@
 								</p>
 								<button class="button small" id="b1", onclick="results('gender-results-2021')">Gender Results</button>
 								<div id="gender-results-2021" style="display:none">
-									<iframe src="https://docs.google.com/viewer?url=https://my3.raceresult.com/182838/RRPublish/data/pdf?name=Result%20Lists%7CGender%20Results&contest=0&lang=en&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe>
+									<iframe src="https://drive.google.com/file/d/1PSFjK-S28RvpGWcQaRRKs8CRP38F-OZ_/preview?contest=0&lang=en&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe>
 								</div>
 								<button class="button small" id="b1", onclick="results('age-group-results-2021')">Age Group Results</button>
 								<br><div id="age-group-results-2021" style="display:none">
-									<iframe src="https://docs.google.com/viewer?url=https://my3.raceresult.com/182838/RRPublish/data/pdf?name=Result%20Lists%7CAge%20Group%20Results&contest=0&lang=en&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe>
+									<iframe src="https://drive.google.com/file/d/1CmKyDPOZDk9sDBGsuokjiBt1cLZ6UTod/preview?contest=0&lang=en&embedded=true" style="width:100%; height:500px;" frameborder="0"></iframe>
 								</div>
 								<br>
 								<script>
@@ -373,71 +425,116 @@
 						<!-- Stiri -->
 							<article id="stiri">
 								<h2 class="major">Știri</h2>
+								<span class="image main"><img src="images/livetrail.png" alt="" /></span>
+								<h3>LIVE TRAIL aplicația oficială la Maraton MM 2024!</h3>
+								<h4><i>Data publicării: 14 Iunie 2024</i></h4>
+								<p><b>LIVE TRAIL</b> este aplicația dezvoltată de <b>compania cu același nume</b> (în România prin <a href='https://sportmanagementevents.com/' target="_blank">Sport Management Events</a>) exclusiv pentru alergătorii...<a href="#articol14iunie">&nbsp&nbsp&nbspVezi mai mult...</a></p>
+								<br>
+								<span class="image main"><img src="images/curse_utmb_index.png" alt="" /></span>
+								<h3>Maraton Maramureș - UTMB Index</h3>
+								<h4><i>Data publicării: 30 Mai 2024</i></h4>
+								<p>Cursa Semimaraton Simared 21k și Maraton 42k din cadrul Maraton Maramureș sunt indexate curse cu punctaj UTMB. Astfel, alergătorii...<a href="#articol30mai">&nbsp&nbsp&nbspVezi mai mult...</a></p>
+								<br>
 								<span class="image main"><img src="images/tricou.jpeg" alt="" /></span>
 								<h3>Tricoul de participare</h3>
 								<h4><i>Data publicării: 29 Mai 2024</i></h4>
 								<p>Suntem încântați să vă anunțăm că în cadrul Maratonului Maramureș, fiecare participant va primi un tricou special oferit în kitul...<a href="#articol29mai">&nbsp&nbsp&nbspVezi mai mult...</a></p>
-								<!-- <script>
-									var status = "less";
-									function toggleText1() {
-										var content="<p>Suntem încântați să vă anunțăm că în cadrul Maratonului Maramureș, fiecare participant va primi un tricou special oferit în kitul de participare! Acest tricou este nu doar o amintire frumoasă, ci și o modalitate de a vă arăta susținerea pentru acest eveniment extraordinar.</p><p>Tricoul este unul de o excelentă calitate dedicat pentru alergare din linia PRO HG Climatherm®, o îmbrăcăminte termo-reglabilă, oferă confort și se adaptează corpului în timpul exercițiilor fizice.<br><br><b>DRY:</b> elimină transpirația și provoacă evaporarea acesteia, menținând corpul uscat în orice moment.<br><b>ODOR:</b> antibacterian, antialergic, previne mirosul neplacut al corpului.<br><b>3D:</b> adaptabilitate și confort maxim.<br><b>THERMOREG:</b> termoregulator.  Menține stabilă temperatura corpului.<br><b>PERFORMANCE:</b> reduce concentrația de acid lactic, îmbunătățind astfel circulația sângelui și oxigenarea celulelor.</p><p><a href='#register'>Înscrie-te acum</a> daca vrei să-l primești în kitul de participare!</p><p><i>Autor: Echipa Maraton Maramureș</i></p><a id='toggleButton1' onclick='toggleText1()' href='javascript:void(0);'>&nbsp&nbsp&nbspVezi mai puțin...</a></p>";
-
-										if (status == "less") {
-											document.getElementById("textArea1").innerHTML=content;
-											document.getElementById("toggleButton1").innerText = "Vezi mai putin...";
-											status = "more";
-										} else if (status == "more") {
-											document.getElementById("textArea1").innerHTML = "Suntem încântați să vă anunțăm că în cadrul Maratonului Maramureș, fiecare participant va primi un tricou special oferit în kitul...<a id='toggleButton1' onclick='toggleText1()' href='javascript:void(0);'>&nbsp&nbsp&nbspVezi mai mult...</a>";
-											document.getElementById("toggleButton1").innerText = "Vezi mai mult...";
-											status = "less"
-										}
-									}
-								</script> -->
 								<br>
 								<span class="image main"><img src="images/news01.jpeg" alt="" /></span>
 								<h3>Deschidere înscrieri Maraton Maramureș</h3>
 								<h4><i>Data publicării: 28 Aprilie 2024</i></h4>
 								<p>Dragi alergători și iubitori ai naturii!</p>
 								<p>Vă invităm să vă alăturați aventurii montane a anului în inima Maramureșului! Înscrierile pentru Maratonul Maramureș sunt acum... <a  href="#articol28aprilie">&nbsp&nbsp&nbspVezi mai mult...</a></p>
-								<!-- <script>
-									var status = "less";
-									function toggleText2() {
-										var content="<p>Vă invităm să vă alăturați aventurii montane a anului în inima Maramureșului! Înscrierile pentru Maratonul Maramureș sunt acum deschise!</p><p>🌲 <b>Drumul Maramureșului 15K:</b> Traseul nostru de alergare și drumeție este deschis tuturor! Pornind din parcul Regina Maria Baia Mare, veți urma traseul pitoresc marcat cu semnul distinctiv până la barajul Firiza. Vă veți bucura de o urcare provocatoare și o coborâre revigorantă, cu o panoramă de neuitat către barajul Firiza și Vârful Igniș.</p><p>🏔️ <b>Semimaraton Simared 21K:</b> Acest traseu este dedicat celor care caută o provocare de alergare montană. După aceeași urcare inițială ca și Drumul Maramureșului 15K, veți continua cu o urcare spre Piatra Șoimului și o coborâre spre Lacul Bodi Ferneziu, finalizând cu o potecă frumoasă și alergabilă până la finish.</p><p>🥇 <b>Maratonul Maramureș 42K:</b> Pentru cei care doresc să-și testeze limitele, maratonul nostru oferă o experiență unică. După traseul comun cu semimaratonul, veți explora o buclă de 21 km prin peisaje de basm, o urcare pe Vârful Igniș și o coborâre spectaculoasă, încheind cu o panoramă liniștitoare la finish.</p><p>Înscrieți-vă acum și pregătiți-vă să descoperiți frumusețea Maramureșului în pas de alergare!</p><p>Evenimentul va avea loc pe data de 15 iunie 2024 iar concurenții care se înscriu din timp beneficiază de o contribuție de participare redusă. Găsești mai multe detalii la secțiunea Înscrieri</p><a href='#register' class='button small'>Înscrie-te acum!</a><p><p><i>Autor: Echipa Maraton Maramureș</i></p><a id='toggleButton2' onclick='toggleText2()' href='javascript:void(0);'>&nbsp&nbsp&nbspVezi mai puțin...</a></p>";
-
-										if (status == "less") {
-											document.getElementById("textArea2").innerHTML=content;
-											document.getElementById("toggleButton2").innerText = "Vezi mai putin...";
-											status = "more";
-										} else if (status == "more") {
-											document.getElementById("textArea2").innerHTML = "Vă invităm să vă alăturați aventurii montane a anului în inima Maramureșului! Înscrierile pentru Maratonul Maramureș sunt acum... <a id='toggleButton2' onclick='toggleText2()' href='javascript:void(0);'>&nbsp&nbsp&nbspVezi mai mult...</a>";
-											document.getElementById("toggleButton2").innerText = "Vezi mai mult...";
-											status = "less"
-										}
-									}
-								</script> -->
+								
 							</article>
-						
-						<!-- Articol 29 mai -->
-						<article id="articol29mai">
-							<h2 class="major">Tricoul de participare</h2>
-							<span class="image main"><img src="images/tricou.jpeg" alt="" /></span>
-							<h4><i>Data publicării: 29 Mai 2024</i></h4>
-							<p id="textArea">Suntem încântați să vă anunțăm că în cadrul Maratonului Maramureș, fiecare participant va primi un tricou special oferit în kitul de participare! Acest tricou este nu doar o amintire frumoasă, ci și o modalitate de a vă arăta susținerea pentru acest eveniment extraordinar.</p><p>Tricoul este unul de o excelentă calitate dedicat pentru alergare din linia PRO HG Climatherm®, o îmbrăcăminte termo-reglabilă, oferă confort și se adaptează corpului în timpul exercițiilor fizice.<br><br><b>DRY:</b> elimină transpirația și provoacă evaporarea acesteia, menținând corpul uscat în orice moment.<br><b>ODOR:</b> antibacterian, antialergic, previne mirosul neplacut al corpului.<br><b>3D:</b> adaptabilitate și confort maxim.<br><b>THERMOREG:</b> termoregulator.  Menține stabilă temperatura corpului.<br><b>PERFORMANCE:</b> reduce concentrația de acid lactic, îmbunătățind astfel circulația sângelui și oxigenarea celulelor.</p><p><a href='#register'>Înscrie-te acum</a> daca vrei să-l primești în kitul de participare!</p><p><i>Autor: Echipa Maraton Maramureș</i></p>
-							<a href='#stiri'>Înapoi la știri</a>&nbsp&nbsp&nbsp
-							<a href="https://www.facebook.com/sharer/sharer.php?u=https://ctlnmhl.github.io/maraton_mm_website/%23articol29mai" class="share-btn facebook">Share on Facebook</a>
-							</p>
-						</article>
+							<!-- Articol 30 mai -->
+							<article id="articol30mai">
+								<h3 class="major">Maraton Maramureș - UTMB Index</h2>
+								<span class="image main"><img src="images/curse_utmb_index.png" alt="" /></span>
+								<h4><i>Data publicării: 30 Mai 2024</i></h4>
+								<p>Cursa Semimaraton Simared 21k și Maraton 42k din cadrul Maraton Maramureș sunt indexate curse cu punctaj UTMB. Astfel alergătorii care finalizează una din cele două curse vor primi puncte in indexul UTMB.</p>
+								<p>Indexul UTMB® este un sistem care măsoară experiența și performanța alergătorilor în evenimentele din seria mondială UTMB®. Acesta a fost lansat în iunie 2021 și este acum poziționat în centrul sistemului sportiv al seriei mondiale UTMB®. Indexul permite utilizarea unei singure metrici pentru toți alergătorii, de la începători la elita, ca o modalitate de a demonstra experiența lor în curse și nivelul de performanță.</p>
+								<p>Începând cu iunie 2022, toate cursele care erau calificative pentru seria mondială UTMB® au devenit curse Index UTMB®, deoarece acest lucru descrie mai bine sistemul sportiv și statutul acordat alergătorilor prin participarea lor la aceste curse¹. Pentru a intra în loteria de calificare pentru cursele emblematice Dacia UTMB Mont-Blanc (UTMB, CCC și OCC), care au devenit finalele seriei mondiale UTMB®, alergătorii trebuie să aibă cel puțin 1 Running Stone, care poate fi colectat exclusiv terminând un eveniment din seria mondială UTMB® sau Majors, adică evenimentele care poartă numele „By UTMB®”. De asemenea, alergătorii trebuie să dețină un Index UTMB® într-o anumită „categorie de cursă” ca dovadă a experienței lor</p>
+								<p>Indexul UTMB® oferă o serie de beneficii și avantaje noi alergătorilor și pe parcursul seriei mondiale UTMB®. De exemplu, cursele Index UTMB® oferă tuturor finaliștilor un Index UTMB® valid în categoria de distanță corespunzătoare cursei. Pentru toate cursele din seria mondială UTMB®, alergătorii cu un Index UTMB® valid vor avea o intrare prioritară</p>
+								<p>Pentru mai multe informații despre cum este calculat Indexul UTMB® și cum poate fi îmbunătățit, puteți consulta <a href="https://utmb.world/utmb-index/info">pagina oficială UTMB®.</a></p>
+								<p><i>Autor: Echipa Maraton Maramureș</i></p>
+								<a href='#stiri'>Înapoi la știri</a>&nbsp&nbsp&nbsp
+								<a class="share-btn facebook" onclick="shareOverrideOGMeta('https://maratonmaramures.ro/#articol30mai', 'MARATON MARAMUREȘ - UTMB INDEX', 'Cursa Semimaraton Simared 21k și Maraton 42k din cadrul Maraton Maramureș sunt indexate curse cu punctaj UTMB. Astfel alergătorii care finalizează una din cele două curse vor primi puncte in indexul UTMB.', 'https://maratonmaramures.ro/images/curse_utmb_index.png')">Share on Facebook</a>
+								</p>
+								
+							</article>
+							
+							<!-- Articol 29 mai -->
+							<article id="articol29mai">
+								<h3 class="major">Tricoul de participare</h2>
+								<span class="image main"><img src="images/tricou.jpeg" alt="" /></span>
+								<h4><i>Data publicării: 29 Mai 2024</i></h4>
+								<p id="textArea">Suntem încântați să vă anunțăm că în cadrul Maratonului Maramureș, fiecare participant va primi un tricou special oferit în kitul de participare! Acest tricou este nu doar o amintire frumoasă, ci și o modalitate de a vă arăta susținerea pentru acest eveniment extraordinar.</p><p>Tricoul este unul de o excelentă calitate dedicat pentru alergare din linia PRO HG Climatherm®, o îmbrăcăminte termo-reglabilă, oferă confort și se adaptează corpului în timpul exercițiilor fizice.<br><br><b>DRY:</b> elimină transpirația și provoacă evaporarea acesteia, menținând corpul uscat în orice moment.<br><b>ODOR:</b> antibacterian, antialergic, previne mirosul neplacut al corpului.<br><b>3D:</b> adaptabilitate și confort maxim.<br><b>THERMOREG:</b> termoregulator.  Menține stabilă temperatura corpului.<br><b>PERFORMANCE:</b> reduce concentrația de acid lactic, îmbunătățind astfel circulația sângelui și oxigenarea celulelor.</p><p><a href='#register'>Înscrie-te acum</a> daca vrei să-l primești în kitul de participare!</p><p><i>Autor: Echipa Maraton Maramureș</i></p>
+								<a href='#stiri'>Înapoi la știri</a>&nbsp&nbsp&nbsp
+								</p>
+								<a href="https://www.facebook.com/sharer/sharer.php?u=https://ctlnmhl.github.io/maraton_mm_website/%23articol29mai" class="share-btn facebook">Share on Facebook</a>
+							</article>
 
-						<!-- Articol 28 aprilie -->
-						<article id="articol28aprilie">
-							<h2 class="major">Descriere înscrieri Maraton Maramureș</h2>
-							<span class="image main"><img src="images/news01.jpeg" alt="" /></span>
-							<h4><i>Data publicării: 28 Aprilie 2024</i></h4>
-							<p id="textArea">Vă invităm să vă alăturați aventurii montane a anului în inima Maramureșului! Înscrierile pentru Maratonul Maramureș sunt acum deschise!</p><p>🌲 <b>Drumul Maramureșului 15K:</b> Traseul nostru de alergare și drumeție este deschis tuturor! Pornind din parcul Regina Maria Baia Mare, veți urma traseul pitoresc marcat cu semnul distinctiv până la barajul Firiza. Vă veți bucura de o urcare provocatoare și o coborâre revigorantă, cu o panoramă de neuitat către barajul Firiza și Vârful Igniș.</p><p>🏔️ <b>Semimaraton Simared 21K:</b> Acest traseu este dedicat celor care caută o provocare de alergare montană. După aceeași urcare inițială ca și Drumul Maramureșului 15K, veți continua cu o urcare spre Piatra Șoimului și o coborâre spre Lacul Bodi Ferneziu, finalizând cu o potecă frumoasă și alergabilă până la finish.</p><p>🥇 <b>Maratonul Maramureș 42K:</b> Pentru cei care doresc să-și testeze limitele, maratonul nostru oferă o experiență unică. După traseul comun cu semimaratonul, veți explora o buclă de 21 km prin peisaje de basm, o urcare pe Vârful Igniș și o coborâre spectaculoasă, încheind cu o panoramă liniștitoare la finish.</p><p>Înscrieți-vă acum și pregătiți-vă să descoperiți frumusețea Maramureșului în pas de alergare!</p><p>Evenimentul va avea loc pe data de 15 iunie 2024 iar concurenții care se înscriu din timp beneficiază de o contribuție de participare redusă. Găsești mai multe detalii la secțiunea Înscrieri</p><a href='#register' class='button small'>Înscrie-te acum!</a><p><p><i>Autor: Echipa Maraton Maramureș</i></p>
-							<a href='#stiri'>Înapoi la știri</a>&nbsp&nbsp&nbsp
-							<a href="https://www.facebook.com/sharer/sharer.php?u=https://ctlnmhl.github.io/maraton_mm_website/%23articol28aprilie" class="share-btn facebook">Share on Facebook</a>
-							</p>
-						</article>
+							<!-- Articol 28 aprilie -->
+							<article id="articol28aprilie">
+								<h3 class="major">Descriere înscrieri Maraton Maramureș</h2>
+								<span class="image main"><img src="images/news01.jpeg" alt="" /></span>
+								<h4><i>Data publicării: 28 Aprilie 2024</i></h4>
+								<p id="textArea">Vă invităm să vă alăturați aventurii montane a anului în inima Maramureșului! Înscrierile pentru Maratonul Maramureș sunt acum deschise!</p><p>🌲 <b>Drumul Maramureșului 15K:</b> Traseul nostru de alergare și drumeție este deschis tuturor! Pornind din parcul Regina Maria Baia Mare, veți urma traseul pitoresc marcat cu semnul distinctiv până la barajul Firiza. Vă veți bucura de o urcare provocatoare și o coborâre revigorantă, cu o panoramă de neuitat către barajul Firiza și Vârful Igniș.</p><p>🏔️ <b>Semimaraton Simared 21K:</b> Acest traseu este dedicat celor care caută o provocare de alergare montană. După aceeași urcare inițială ca și Drumul Maramureșului 15K, veți continua cu o urcare spre Piatra Șoimului și o coborâre spre Lacul Bodi Ferneziu, finalizând cu o potecă frumoasă și alergabilă până la finish.</p><p>🥇 <b>Maratonul Maramureș 42K:</b> Pentru cei care doresc să-și testeze limitele, maratonul nostru oferă o experiență unică. După traseul comun cu semimaratonul, veți explora o buclă de 21 km prin peisaje de basm, o urcare pe Vârful Igniș și o coborâre spectaculoasă, încheind cu o panoramă liniștitoare la finish.</p><p>Înscrieți-vă acum și pregătiți-vă să descoperiți frumusețea Maramureșului în pas de alergare!</p><p>Evenimentul va avea loc pe data de 15 iunie 2024 iar concurenții care se înscriu din timp beneficiază de o contribuție de participare redusă. Găsești mai multe detalii la secțiunea Înscrieri</p><a href='#register' class='button small'>Înscrie-te acum!</a><p><p><i>Autor: Echipa Maraton Maramureș</i></p>
+								<a href='#stiri'>Înapoi la știri</a>&nbsp&nbsp&nbsp
+								<a href="https://www.facebook.com/sharer/sharer.php?u=https://ctlnmhl.github.io/maraton_mm_website/%23articol28aprilie" class="share-btn facebook">Share on Facebook</a>
+								</p>
+							</article>
+
+							<!-- Articol 14 iunie -->
+							<article id="articol14iunie">
+								<h3 class="major">LIVE TRAIL aplicația oficială<br>Maraton MM 2024!</h2>
+								<span class="image main"><img src="images/livetrail.png" alt="" /></span>
+								<h4><i>Data publicării: 14 Iunie 2024</i></h4>
+								<p id="textArea">Am creat și website-ul dedicat: <a href='https://maratonmaramures.livetrail.run/' target="_blank">Maraton Maramureș (livetrail.run)</a></p>
+								<p><b>LIVE TRAIL</b> este aplicația dezvoltată de <b>compania cu același nume </b>(în România prin <a href='https://sportmanagementevents.com/' target="_blank">Sport Management Events</a>) exclusiv pentru alergătorii înscriși la Maraton MM și iți oferă:
+									<ul>
+										<li>Integrare cu baza de date UTMB (Ultra Trail de Mont Blanc) – gasești în aplicație nivelul tău de performanță estimat prin index-ul UTMB;</li>
+										<li>Notificări după trecerea prin fiecare punct de control cu timpul realizat și locul în clasament, distanța rămasă, diferența de nivel acumulată;</li>
+										<li>Adăugarea de prieteni din aceeași cursă la care participi tu și urmărirea evoluției lor prin intermediul notificărilor;</li>
+										<li>3 butoane pentru urgențe: în caz de abandon, buton de SOS sau pentru telefon direct la echipa de organizare;</li>
+										<li>Posibilitatea de social media sharing – link direct cu numărul de concurs către platformă;</li>
+										<li>Posibilitatea PLANIFICĂRII CURSEI în funcție de punctajul UTMB sau de obiectivul personal;</li>
+										<li>Tracking GPS – folosești telefonul ca GPS tracker și urmăritorii iți pot vedea poziția în timp real pe hartă (opțiunea poate fi setată pe public, privat sau restricționată cu parolă);</li>
+									</ul>
+									Tot ceea ce trebuie să faci este să-ți descarci aplicația gratuită din <a href='https://play.google.com/store/apps/details?id=net.livetrail.livetrail' target="_blank">Google Play</a> sau <a href='https://apps.apple.com/ro/app/livetrail/id1205514003' target="_blank">App Store</a> și să-ți activezi contul (daca nu le-ai facut încă).<b> LIVE TRAIL</b> te va identifica automat (atenție: ordinea nume/prenume cu care te-ai înregistrat la concurs trebuie să fie identică cu ordinea nume/prenume folosită la crearea contului în aplicația LIVE RUN).
+								</p>
+								<p>Legi ceasul tău la telefon și te bucuri de o experiență unică in România cu aplicația <b>LIVE TRAIL.</b></p>
+								<p><a href='https://maratonmaramures.livetrail.run/parcours.php' target="_blank">Vezi aici traseele cu punctele intermediare.</a></p>
+								<p><a href='https://maratonmaramures.livetrail.run/teteCourse.php' target="_blank">Vezi aici rezultatele în timp real și progresul participanților la Maraton MM.</a></p>
+								<p><a href='https://maratonmaramures.livetrail.run/lstCoureurs.php' target="_blank">Vezi aici lista de participanți, numerele de concurs și categoriile.</a></p>
+								<p><a href='https://maratonmaramures.livetrail.run/classement.php' target="_blank">Vezi aici rezultatele finale oficiale.</a></p>
+								<p><p><i>Autor: Echipa Maraton Maramureș</i></p>
+								<a href='#stiri'>Înapoi la știri</a>&nbsp&nbsp&nbsp
+								<a href="https://www.facebook.com/sharer/sharer.php?u=https://ctlnmhl.github.io/maraton_mm_website/%23articol14iunie" class="share-btn facebook">Share on Facebook</a>
+								</p>
+							</article>
+
+							<script>
+								function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage)
+								{
+									FB.ui({
+										method: 'share_open_graph',
+										action_type: 'og.likes',
+										action_properties: JSON.stringify({
+											object: {
+												'og:url': overrideLink,
+												'og:title': overrideTitle,
+												'og:description': overrideDescription,
+												'og:image': overrideImage
+											}
+										})
+									},
+									function (response) {
+									// Action after response
+									});
+								}
+								</script>
 
 						<!-- Contact -->
 							<article id="parteneri">
@@ -447,8 +544,14 @@
 								<a class="image main" href="https://www.rapido.ro/" target="_blank" rel="noopener noreferrer"><img src="images/rapido_logo.png" alt=""></a>
 								<a class="image main" href="https://www.instagram.com/runforyourlife100/" target="_blank" rel="noopener noreferrer"><img src="images/rfyl_logo.png" alt=""></a>
 								<a class="image main" href="https://www.facebook.com/xtremeadventurebm" target="_blank" rel="noopener noreferrer"><img src="images/extreme_adventure_logo.png" alt=""></a>
-								<br><br>
+								<!-- <br><br> -->
 								<a class="image main" href="https://www.visitmaramures.ro/" target="_blank" rel="noopener noreferrer"><img src="images/visit_mm_logo.png" alt=""></a>
+								<br><br>
+								<a class="image main" href="https://www.drumulmaramuresului.ro/" target="_blank" rel="noopener noreferrer"><img src="images/dmm_logo.png" alt=""></a>
+								<br><br>
+								<a class="image main" href="https://www.univer.ro/" target="_blank" rel="noopener noreferrer"><img src="images/univer_logo.png" alt=""></a>
+								<a class="image main" href="https://ramira.ro/" target="_blank" rel="noopener noreferrer"><img src="images/ramira_logo.png" alt=""></a>
+								<a class="image main" href="https://www.cjmaramures.ro/" target="_blank" rel="noopener noreferrer"><img src="images/cj_mm_logo.png" alt=""></a>
 
 								<!-- <ul class="icons">
 									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -479,13 +582,13 @@
 									<h4>Preformatted</h4>
 									<pre><code>i = 0;
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+										while (!deck.isInOrder()) {
+											print 'Iteration ' + i;
+											deck.shuffle();
+											i++;
+										}
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+										print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								</section>
 
 								<section>
